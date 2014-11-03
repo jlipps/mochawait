@@ -25,7 +25,7 @@
   "engines": [
     "node"
   ],
-  "main": "./lib/es6/wrapper.js",
+  "main": "./lib/es5/wrapper.js",
   "bin": {},
   "directories": {
     "lib": "./lib/es6"
