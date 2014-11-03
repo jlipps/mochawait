@@ -1,0 +1,46 @@
+{
+  "name": "mochawait",
+  "description": "Mocha with ES7 await/async",
+  "tags": [
+    "github",
+    "agile",
+    "issues"
+  ],
+  "version": "1.0.0",
+  "author": "jlipps@gmail.com",
+  "licenses": [
+    {
+      "type": "apache-2.0",
+      "url": "https://raw.github.com/jlipps/mochawait/master/LICENSE"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jlipps/mochawait.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jlipps/mochawait/issues"
+  },
+  "engines": [
+    "node"
+  ],
+  "main": "./lib/es5/wrapper.js",
+  "bin": {
+  },
+  "directories": {
+    "lib": "./lib/es6"
+  },
+  "dependencies": {
+    "traceur": "0.0.72",
+    "q": "^1.0.1",
+    "assert": "^1.1.2",
+    "lodash": "^2.4.1"
+  },
+  "scripts": {},
+  "devDependencies": {
+    "gulp-traceur": "^0.13.0",
+    "gulp": "^3.8.9",
+    "gulp-header": "^1.2.2",
+    "gulp-filter": "^1.0.2"
+  }
+}
