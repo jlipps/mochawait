@@ -1,11 +1,10 @@
 /*global describe:true, before:true, beforeEach:true, afterEach:true,
   it:true, after:true */
 
-require('traceur/bin/traceur-runtime');
-require('should');
-let Q = require('q');
-import mochawait from '../../lib/es5/wrapper';
-mochawait.rewrite();
+import 'traceur/bin/traceur-runtime';
+import '../../lib/es5/wrapper';
+import 'should';
+import Q from 'q';
 
 async function sleep (ms) {
   let start = Date.now();

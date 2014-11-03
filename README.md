@@ -14,10 +14,8 @@ npm install mochawait
 Then:
 
 ```js
-import mw from 'mochawait'
-let it = mochawait.it
-  , before = mw.before
-  , should = require('should');
+import 'mochawait';
+import 'should';
 
 describe('My sweet project', function () {
   before(async function () {
@@ -43,15 +41,6 @@ run with `mocha` as per usual:
 ```
 mocha my-specs.js
 ```
-
-Notice that we're simply redefining `it` and `before` to clobber Mocha's built-in one. We could also have simply done this:
-
-```js
-import mw from 'mochawait';
-mw.rewrite();
-```
-
-Which rewrites the `it`, `before`, `beforeEach`, `after`, and `afterEach` globals.
 
 ## Run tests for this project:
 
