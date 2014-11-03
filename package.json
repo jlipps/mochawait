@@ -2,9 +2,10 @@
   "name": "mochawait",
   "description": "Mocha with ES7 await/async",
   "tags": [
-    "github",
-    "agile",
-    "issues"
+    "mocha",
+    "testing",
+    "es7",
+    "async"
   ],
   "version": "1.0.0",
   "author": "jlipps@gmail.com",
@@ -24,23 +25,26 @@
   "engines": [
     "node"
   ],
-  "main": "./lib/es5/wrapper.js",
-  "bin": {
-  },
+  "main": "./lib/es6/wrapper.js",
+  "bin": {},
   "directories": {
     "lib": "./lib/es6"
   },
   "dependencies": {
     "traceur": "0.0.72",
     "q": "^1.0.1",
-    "assert": "^1.1.2",
-    "lodash": "^2.4.1"
+    "lodash": "^2.4.1",
+    "mocha": "^2.0.1"
   },
-  "scripts": {},
+  "scripts": {
+    "test": "$(npm bin)/gulp && $(npm bin)/mocha ./test/es5/specs.js"
+  },
   "devDependencies": {
     "gulp-traceur": "^0.13.0",
     "gulp": "^3.8.9",
     "gulp-header": "^1.2.2",
-    "gulp-filter": "^1.0.2"
+    "gulp-filter": "^1.0.2",
+    "merge-stream": "^0.1.6",
+    "should": "^4.1.0"
   }
 }
