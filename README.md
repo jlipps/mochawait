@@ -17,12 +17,12 @@ Then:
 import 'mochawait';
 import 'should';
 
-describe('My sweet project', function () {
-  before(async function () {
+describe('My sweet project', () => {
+  before(async () => {
     await doSomeTestSetup();
   });
 
-  it('should work as expected', async function () {
+  it('should work as expected', async () => {
     var res = await myAsyncMethod();
     res.should.equal('foo');
   });

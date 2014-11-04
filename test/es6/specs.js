@@ -38,27 +38,27 @@ describe('mochawait tests', function () {
     , myStr = ''
     , testsRun = 0;
 
-  before(async function () {
+  before(async () => {
     let start = Date.now();
     myStr.should.equal('');
     myStr = await slowConcat(myStr, 'foo');
     (Date.now() - start).should.be.above(19);
   });
 
-  beforeEach(async function () {
+  beforeEach(async () => {
     let start = Date.now();
     myInt = await slowDouble(myInt);
     (Date.now() - start).should.be.above(9);
   });
 
-  after(async function () {
+  after(async () => {
     let start = Date.now();
     myInt = await slowDouble(myInt);
     (Date.now() - start).should.be.above(9);
     myInt.should.equal(32);
   });
 
-  afterEach(async function () {
+  afterEach(async () => {
     let start = Date.now();
     await sleep(50);
     if (testsRun === 1) {
@@ -69,7 +69,7 @@ describe('mochawait tests', function () {
     (Date.now() - start).should.be.above(49);
   });
 
-  it('should work like mocha', async function () {
+  it('should work like mocha', async () => {
     myStr.should.equal('foo');
     myInt.should.equal(4);
     let start = Date.now();
@@ -81,7 +81,7 @@ describe('mochawait tests', function () {
     testsRun++;
   });
 
-  it('should work like mocha some more', async function () {
+  it('should work like mocha some more', async () => {
     myStr.should.equal('foobar');
     myInt.should.equal(16);
     let start = Date.now();
