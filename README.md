@@ -23,7 +23,7 @@ describe('My sweet project', () => {
   });
 
   it('should work as expected', async () => {
-    var res = await myAsyncMethod();
+    let res = await myAsyncMethod();
     res.should.equal('foo');
   });
 });
