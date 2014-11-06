@@ -60,7 +60,9 @@ describe('mochawait tests', function () {
 
   afterEach(async () => {
     let start = Date.now();
-    await sleep(50);
+    for (let i = 0; i < 5; i++) {
+      await sleep(10);
+    }
     if (testsRun === 1) {
       myStr.should.equal('foobar');
     } else {
