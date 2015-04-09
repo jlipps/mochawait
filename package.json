@@ -25,26 +25,23 @@
   "engines": [
     "node"
   ],
-  "main": "./lib/es5/wrapper.js",
+  "main": "./build/index.js",
   "bin": {},
   "directories": {
-    "lib": "./lib/es6"
+    "lib": "./lib"
   },
   "dependencies": {
-    "traceur": "0.0.72",
-    "q": "^1.0.1",
-    "lodash": "^2.4.1",
-    "mocha": "^2.0.1"
+    "appium-gulp-plugins": "1.0.0",
+    "lodash": "^3.6.0",
+    "mocha": "^2.2.4"
   },
   "scripts": {
-    "test": "$(npm bin)/gulp && $(npm bin)/mocha ./test/es5/specs.js"
+    "test": "$(npm bin)/gulp once",
+    "prepublish": "$(npm bin)/gulp prepublish",
+    "watch": "$(npm bin)/gulp"
   },
   "devDependencies": {
-    "gulp-traceur": "^0.13.0",
-    "gulp": "^3.8.9",
-    "gulp-header": "^1.2.2",
-    "gulp-filter": "^1.0.2",
-    "merge-stream": "^0.1.6",
-    "should": "^4.1.0"
+    "gulp": "^3.8.11",
+    "should": "^5.2.0"
   }
 }
