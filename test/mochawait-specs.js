@@ -1,10 +1,8 @@
-/*global describe:true, before:true, beforeEach:true, afterEach:true,
-  it:true, after:true */
+/* global describe:true, before:true, beforeEach:true, afterEach:true, it:true, after:true */
+// transpile:mocha
 
-import 'traceur/bin/traceur-runtime';
-import '../../lib/es5/wrapper';
+import '../index';
 import 'should';
-import Q from 'q';
 
 async function sleep (ms) {
   let start = Date.now();
