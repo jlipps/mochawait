@@ -32,10 +32,10 @@
   },
   "dependencies": {
     "appium-gulp-plugins": "^1.0.3",
-    "babel-runtime": "^5.0.12",
+    "babel-runtime": "5.5.5",
     "lodash": "^3.6.0",
     "mocha": "^2.2.4",
-    "source-map-support": "^0.2.10"
+    "source-map-support": "^0.3.1"
   },
   "scripts": {
     "test": "$(npm bin)/gulp once",
@@ -44,6 +44,6 @@
   },
   "devDependencies": {
     "gulp": "^3.8.11",
-    "should": "^5.2.0"
+    "should": "^6.0.3"
   }
 }
