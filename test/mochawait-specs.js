@@ -3,6 +3,7 @@
 
 import '../index';
 import 'should';
+import {Suite} from 'mocha';
 
 async function sleep (ms) {
   let start = Date.now();
@@ -37,6 +38,7 @@ describe('mochawait tests', function () {
     , testsRun = 0;
 
   before(async () => {
+    this.should.be.instanceOf(Suite);
     let start = Date.now();
     myStr.should.equal('');
     myStr = await slowConcat(myStr, 'foo');
@@ -44,12 +46,14 @@ describe('mochawait tests', function () {
   });
 
   beforeEach(async () => {
+    this.should.be.instanceOf(Suite);
     let start = Date.now();
     myInt = await slowDouble(myInt);
     (Date.now() - start).should.be.above(9);
   });
 
   after(async () => {
+    this.should.be.instanceOf(Suite);
     let start = Date.now();
     myInt = await slowDouble(myInt);
     (Date.now() - start).should.be.above(9);
@@ -57,6 +61,7 @@ describe('mochawait tests', function () {
   });
 
   afterEach(async () => {
+    this.should.be.instanceOf(Suite);
     let start = Date.now();
     for (let i = 0; i < 5; i++) {
       await sleep(10);
@@ -70,6 +75,7 @@ describe('mochawait tests', function () {
   });
 
   it('should work like mocha', async () => {
+    this.should.be.instanceOf(Suite);
     myStr.should.equal('foo');
     myInt.should.equal(4);
     let start = Date.now();
@@ -82,6 +88,7 @@ describe('mochawait tests', function () {
   });
 
   it('should work like mocha some more', async () => {
+    this.should.be.instanceOf(Suite);
     myStr.should.equal('foobar');
     myInt.should.equal(16);
     let start = Date.now();
